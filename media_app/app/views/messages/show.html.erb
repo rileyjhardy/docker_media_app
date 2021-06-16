@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @message.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @message.description %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @message.tag %>
+</p>
+
+<p>
+  <strong>Video file:</strong>
+  <%= @message.video_file %>
+</p>
+
+<p>
+  <strong>Thumb file:</strong>
+  <%= @message.thumb_file %>
+</p>
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

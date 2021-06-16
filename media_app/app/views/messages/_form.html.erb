@@ -1,0 +1,44 @@
+<%= form_with(model: message) do |form| %>
+  <% if message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+        <% message.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field ">
+    <%= form.label :title , class: 'form-label' %>
+    <%= form.text_field :title , class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description , class: 'form-label' %>
+    <%= form.text_field :description , class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag , class: 'form-label' %>
+    
+    <%= form.text_field :tag , class: 'form-control' %>
+  
+  </div>
+
+  <div class="field">
+    <%= form.label :video_file , class: 'form-label' %>
+    <%= form.file_field :video_file , class: 'form-control' %>
+  </div>
+
+  <div class="field ">
+    <%= form.label :thumb_file , class: 'form-label' %>    
+    <%= form.file_field :thumb_file , class: 'form-control' %>    
+  </div>
+<br />
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
