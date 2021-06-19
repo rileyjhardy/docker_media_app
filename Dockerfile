@@ -18,6 +18,6 @@ RUN apt-get update -qq && apt-get install -y nodejs
 
 
 # Change ownership incase there are issues with Linux owning the files
-RUN sudo chown -R $USER:$USER .
+RUN chown -R $USER:$USER .
 
 ENTRYPOINT [ "/bin/bash" ]
