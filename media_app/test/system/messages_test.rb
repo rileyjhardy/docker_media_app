@@ -16,9 +16,9 @@ class MessagesTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @message.description
     fill_in "Tag", with: @message.tag
-    fill_in "Thumb file", with: @message.thumb_file
+    fill_in "Thumb file", with: @message.thumbnail_url
     fill_in "Title", with: @message.title
-    fill_in "Video file", with: @message.video_file
+    fill_in "Video file", with: @message.url
     click_on "Create Message"
 
     assert_text "Message was successfully created"
@@ -31,9 +31,9 @@ class MessagesTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @message.description
     fill_in "Tag", with: @message.tag
-    fill_in "Thumb file", with: @message.thumb_file
+    fill_in "Thumb file", with: @message.thumbnail_url
     fill_in "Title", with: @message.title
-    fill_in "Video file", with: @message.video_file
+    fill_in "Video file", with: @message.url
     click_on "Update Message"
 
     assert_text "Message was successfully updated"

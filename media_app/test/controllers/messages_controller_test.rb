@@ -17,7 +17,7 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create message" do
     assert_difference('Message.count') do
-      post messages_url, params: { message: { description: @message.description, tag: @message.tag, thumb_file: @message.thumb_file, title: @message.title, video_file: @message.video_file } }
+      post messages_url, params: { message: { description: @message.description, tag: @message.tag, thumbnail_url: @message.thumbnail_url, title: @message.title, url: @message.url } }
     end
 
     assert_redirected_to message_url(Message.last)
@@ -34,7 +34,7 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update message" do
-    patch message_url(@message), params: { message: { description: @message.description, tag: @message.tag, thumb_file: @message.thumb_file, title: @message.title, video_file: @message.video_file } }
+    patch message_url(@message), params: { message: { description: @message.description, tag: @message.tag, thumbnail_url: @message.thumbnail_url, title: @message.title, url: @message.url } }
     assert_redirected_to message_url(@message)
   end
 

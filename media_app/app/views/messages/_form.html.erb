@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field ">
+  <div class="field">
     <%= form.label :title , class: 'form-label' %>
     <%= form.text_field :title , class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :description , class: 'form-label' %>
-    <%= form.text_field :description , class: 'form-control' %>
+    <%= form.text_area :description , class: 'form-control' %>
   </div>
 
   <div class="field">
@@ -29,13 +29,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :video_file , class: 'form-label' %>
-    <%= form.file_field :video_file , class: 'form-control' %>
+    <%= form.label :url , class: 'form-label' %>
+    <%= form.file_field :url , class: 'form-control' %>
   </div>
 
   <div class="field ">
-    <%= form.label :thumb_file , class: 'form-label' %>    
-    <%= form.file_field :thumb_file , class: 'form-control' %>    
+    <%= form.label :thumbnail_url , class: 'form-label' %>    
+    <%= form.file_field :thumbnail_url , class: 'form-control' %>    
   </div>
 <br />
   <div class="actions">

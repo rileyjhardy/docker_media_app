@@ -74,6 +74,6 @@ class MessagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def message_params
-      params.require(:message).permit(:title, :description, :tag, :video_file, :thumb_file)
+      params.require(:message).permit(:title, :description, :tag, :url, :thumbnail_url)
     end
 end

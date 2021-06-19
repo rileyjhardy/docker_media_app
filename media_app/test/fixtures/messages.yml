@@ -4,12 +4,12 @@ one:
   title: MyString
   description: MyString
   tag: MyString
-  video_file: MyString
-  thumb_file: MyString
+  url: MyString
+  thumbnail_url: MyString
 
 two:
   title: MyString
   description: MyString
   tag: MyString
-  video_file: MyString
-  thumb_file: MyString
+  url: MyString
+  thumbnail_url: MyString

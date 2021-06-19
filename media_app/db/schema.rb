@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_181456) do
+ActiveRecord::Schema.define(version: 2021_06_19_185105) do
 
   create_table "messages", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "tag"
-    t.string "video_file"
-    t.string "thumb_file"
+    t.string "url"
+    t.string "thumbnail_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

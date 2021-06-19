@@ -17,13 +17,13 @@
 
 <p>
   <strong>Video file:</strong>
-  <%= @message.video_file %>
+  <%= @message.url %>
 </p>
 
 <p>
   <strong>Thumb file:</strong>
-  <%= @message.thumb_file %>
+  <%= @message.thumbnail_url %>
 </p>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
+
 <%= link_to 'Back', messages_path %>
