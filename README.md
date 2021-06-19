@@ -17,8 +17,16 @@
 4. Update and install gems.
 
         bundle update && bundle install
+
+5. Install Webpacker
+
+        rails webpacker:install
+
+6. Migrate database
+
+        rails db:migrate
         
-5. Begin the Rails server.
+7. Begin the Rails server.
 
         rails s -p $PORT -b 0.0.0.0
         
