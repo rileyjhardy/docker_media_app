@@ -4,7 +4,7 @@ class CreateMessages < ActiveRecord::Migration[6.1]
       t.string :title
       t.string :description
       t.string :tag
-      t.string :url
+      t.string :video_file
       t.string :thumb_file
 
       t.timestamps
