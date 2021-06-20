@@ -18,17 +18,19 @@
 
         bundle update && bundle install
 
-5. Install Webpacker
+5. Install Webpacker.
 
         rails webpacker:install
 
-6. Migrate database
+6. Migrate database.
 
         rails db:migrate
         
 7. Begin the Rails server.
 
         rails s -p $PORT -b 0.0.0.0
+
+8. View application in a web browser by navigating to http://localhost:3000.
         
 ## Run test suite
 
