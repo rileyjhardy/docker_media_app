@@ -22,3 +22,11 @@ span {
 .container-width {
     max-width: 1000px;
 }
+
+img {
+    transition: all .2s;
+}
+
+img:hover {
+    opacity: 0.8;
+}

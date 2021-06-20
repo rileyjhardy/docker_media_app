@@ -2,24 +2,46 @@ require 'rails_helper'
 
 RSpec.describe "Messages", type: :model do
 
-    before(:all) do
-
-        @message = Message.create(title: "Stars", description: "Best song by Switchfoot", tag: "Hits")
-
-    end
-
     it "checks that the message can be created" do
+
+        # Setup & Excercise
+        @message = Message.create(title: "Sermon Message", description: "This is the description", tag: "Philippians")
+
+        # Verification
         expect(@message).to be_valid
+
+        #Teardown
+        @message.destroy
+        
     end
 
     it "checks that the message can be updated" do
-        @message.update(:title => "Let that be Enough")
-        expect(Message.find_by_title("Let that be Enough")).to eq(@message)
+
+        #Setup
+        @message = Message.create(title: "Sermon Message", description: "This is the description", tag: "Philippians")
+
+        # Exercise
+        @message.update(:title => "Different Sermon Message")
+
+        # Verification
+        expect(Message.find_by_title("Different Sermon Message")).to eq(@message)
+
+        #Teardown
+        @message.destroy
+
     end
 
     it "checks that the message can be destroyed" do
+
+        #Setup
+        @message = Message.create(title: "Sermon Message", description: "This is the description", tag: "Philippians")
+
+        #Excercise
         @message.destroy
-        expect(Message.find_by(title: 'Let that be Enough')).to be_nil
+
+        #Verification
+        expect(Message.find_by(title: 'Sermon Message')).to be_nil
+
     end
 
 

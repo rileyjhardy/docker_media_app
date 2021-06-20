@@ -22,14 +22,15 @@
       <div class = 'col-md-auto center'>
         <span class = 'vert-align'><%= i + 1 %></span>
       </div>
-      <div class = 'col-md-2 play'>
-
+      <div class = 'col-md-2'>
+        
       <% if message.thumbnail_url.present? %>
-        <a href= <%= message.url %>><img class = 'img-fluid' height = '90' width = '160' src = <%= message.thumbnail_url %>></img></a>
+        <a href = <%= message.url %>><img class = 'img-fluid' height = '90' width = '160' src = <%= message.thumbnail_url %>></img></a>
       <% else %>
         <p>No thumbnail provided</p>
         <% end %>
       </div>
+      
       <div class = 'col-md-2 '>
         <p><%= message.title %></p>
       </div>
